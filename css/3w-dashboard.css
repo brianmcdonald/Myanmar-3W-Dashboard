@@ -1,7 +1,11 @@
 /*
  * Override dc.js default styles for selection
  */
-
+.dc-chart g.row text {
+  fill: black;
+  font-size: 12px;
+  cursor: pointer;
+}
 .dc-chart .selected path {
     stroke-width: 1;
     stroke: #ccc;
