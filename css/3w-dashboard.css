@@ -1,6 +1,9 @@
 /*
  * Override dc.js default styles for selection
  */
+h1, h2, h3, h4{
+color: #6e081a;
+}
 .dc-chart g.row text {
   fill: black;
   font-size: 12px;
@@ -11,7 +14,9 @@
     stroke: #ccc;
     fill-opacity: 1;
 }
-
+.dc-chart .pie-slice {
+fill: black;
+}
 /*
  * Page specific styles
  */
