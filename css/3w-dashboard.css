@@ -5,7 +5,7 @@ h1, h2, h3, h4{
 color: #6e081a;
 }
 .dc-chart g.row text {
-  fill: black;
+  fill: rgb(14, 68, 106);
   font-size: 12px;
   cursor: pointer;
 }
@@ -15,7 +15,7 @@ color: #6e081a;
     fill-opacity: 1;
 }
 .dc-chart .pie-slice {
-fill: black;
+fill: rgb(14, 68, 106);
 }
 /*
  * Page specific styles
