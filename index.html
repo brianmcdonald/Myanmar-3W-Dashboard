@@ -26,7 +26,7 @@
    <div class="row">
       <div class="col-md-8 col-md-offset-3"><h2>Myanmar - 3W Dashboard</h2></div>
       <div class="row">
-	 <div class="col-xs-7">Interactive data visualization of all Myanmar 3W data by State/Region.</br>Hover over segments for additional data and click to filter by selected criteria.</br><strong>Source:</strong> <a href="http://www.themimu.info/3W/" target="_blank" >MIMU</a></br><strong>Latest data:</strong> 3rd December 2013</div>
+	 <div class="col-xs-7">Interactive data visualization of all Myanmar 3W data by State/Region.</br>Hover over segments for additional data and click to filter by selected criteria.</br><strong>Source:</strong> <a href="http://www.themimu.info/3W/" target="_blank" >MIMU</a></br><strong>Latest data:</strong> 1st April 2014</div>
 	 <div id="count-info" class="col-xs-5 ">
 	    <strong><span class="badge"><span class="filter-count "></span></span></strong> of <strong><span class="badge"><span class="total-count "></span></span></strong> records selected</div>
 
@@ -74,10 +74,10 @@ var org_chart = dc.rowChart("#orgs");
 d3.csv("data/Myanmar_3W_Data.csv", function(csv_data){
       var cf = crossfilter(csv_data);
 
-      cf.sector = cf.dimension(function(d) { return d.SctrCluster; });
+      cf.sector = cf.dimension(function(d) { return d.SectorCluster; });
       cf.status = cf.dimension(function(d) { return d.Status; });
-      cf.pcode = cf.dimension(function(d) { return d.StateCODE; });
-      cf.organisation = cf.dimension(function(d) { return d.Organisation; });
+      cf.pcode = cf.dimension(function(d) { return d.StateRegion; });
+      cf.organisation = cf.dimension(function(d) { return d.Organization; });
 
       var sector = cf.sector.group();
       var status = cf.status.group();
